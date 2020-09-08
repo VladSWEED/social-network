@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./users.module.css";
-import userPhoto from '../../images/user.png'
+import userPhoto from '../../images/user.png';
 import {NavLink} from "react-router-dom";
 import Paginator from "../common/Paginator/Paginator";
 
