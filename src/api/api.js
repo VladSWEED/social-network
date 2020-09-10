@@ -47,13 +47,12 @@ export const profileAPI = {
                 'Content-Type':'multipart/form-data'
             }
         });
+    },
+    saveProfile(profile){
+        return instance.put(`profile`,profile);
     }
 }
-// export const authAPI = {
-//     me(){
-//         return instance.get(`auth/me`)
-//     }
-// }
+
 export const authAPI = {
     me(){
         return instance.get(`auth/me`);
@@ -65,15 +64,3 @@ export const authAPI = {
         return instance.delete(`auth/login`);
     }
 }
-// export const getUsers = (currentPage, pageSize) => {
-//     return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-//         .then(response => {
-//             return response.data
-//         });
-// }
-// export const getUsers = (currentPage, pageSize) => {
-//     return instance.get(`follow?page=${currentPage}&count=${pageSize}`)
-//         .then(response => {
-//             return response.data
-//         });
-// }

@@ -3,23 +3,20 @@ import {createField, Input,Textarea} from "../../common/FormsControls/FormsContr
 import { reduxForm } from 'redux-form';
 
 
-const ProfileDataForm = ({ profile }) => {
-    return <form>
-    <div><button onClick={()=>{}}>save</button></div>
+const ProfileDataForm = ({ handleSubmit,profile }) => {
+    return <form onSubmit={handleSubmit}>
+    <div><button>save</button></div>
     <div>
         <b>Full name</b>:{createField("Full name", "fullname", [], Input)}
     </div>
     <div>
         <b>Looking for a job</b>:{createField("", "lookingForAJob", [], Input, {type:"checkbox"})}
     </div>
-    {profile.lookingForAJob &&
         <div>
             <b>My professional skills</b>:{createField("My professional skills", "lookingForAJobDescription", [], Textarea)}
         </div>
-    }
     <div>
-        <b>About me</b>:{profile.aboutMe}
-        {createField("About me", "aboutMe", [], Textarea)}
+        <b>About me</b>:{createField("About me", "aboutMe", [], Textarea)}
     </div>
     {/* <div>
         <b>Contacts</b>:{Object.keys(profile.contacts).map(key => {
