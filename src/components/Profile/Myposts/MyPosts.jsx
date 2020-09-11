@@ -7,18 +7,14 @@ import {Textarea} from "../../common/FormsControls/FormsControls";
 
 
 const MyPosts = React.memo(props => {
-    let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
+    let postsElements = props.posts.map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/>)
 
     let newPostElement = React.createRef();
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText);
     }
-    // let onPostChange = () => {
-    //     let text = newPostElement.current.value;
-    //     props.updateNewPostText(text);
-    // }
-    return (
+       return (
 
         <div className={s.postsBlock}>
             <h3>My posts</h3>
