@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './ProfileInfo.module.css'
-import styles from '../../common/FormsControls/FormsControls.module.css'
+import style from '../../common/FormsControls/FormsControls.module.css'
 import { createField, Input, Textarea } from "../../common/FormsControls/FormsControls";
 import { reduxForm } from 'redux-form';
 
@@ -9,7 +9,7 @@ import { reduxForm } from 'redux-form';
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {
     return <form onSubmit={handleSubmit}>
         <div><button>save</button></div>
-        {error && <div className={styles.formSummeryError}>
+        {error && <div className={style.formSummeryError}>
             {error}
         </div>
         }
