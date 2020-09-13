@@ -15,23 +15,18 @@ let initialState = {
 export const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USER_DATA:
-        {
-            return {
-                ...state,
-                ...action.data
-            }}
         case GET_CAPTCHA_URL_SUCCESS:{
             return {
-                ...state,
-                ...action.payload
-            }}
+            ...state,
+            ...action.payload
+        }}
         default:
             return state;
     }
 }
 export const setAuthUserData = (userId, email, login, isAuth) => ({
     type: SET_USER_DATA,
-    data: {userId, email, login, isAuth}
+    payload: {userId, email, login, isAuth}
 })
 
 export const getCaptchaUrlSuccess = (captchaUrl) => ({
