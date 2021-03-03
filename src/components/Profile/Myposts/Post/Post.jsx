@@ -4,8 +4,7 @@ import classes from './Post.module.css';
 const Post = (props) => {
     return (
         <div className={classes.item}>
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4kP9cKVsfJYvj7cxt6uBNI9dXjPTALxEpADtDsxFGRZpkdP6w"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4kP9cKVsfJYvj7cxt6uBNI9dXjPTALxEpADtDsxFGRZpkdP6w"/>
             {props.message}
             <div>
                 {props.likesCount}

@@ -24,7 +24,6 @@ export const Input = (props) => {
     return <FormControl {...props}> <input {...input}{...restProps} /></FormControl>
 }
 
-// рест оператор !!!!!!!!!
 
 export const createField = (placeholder, name, validators, component,props={},text="") => (
     <div>
